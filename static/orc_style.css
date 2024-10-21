@@ -1,0 +1,141 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    background-color: black;
+    justify-content: center;
+    margin: 1px;
+}
+
+h1{
+    background-color: rgb(3, 7, 11);
+    color: aliceblue;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+h3{
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+h5{
+    background-color: rgb(3, 7, 11);
+    color: aliceblue;
+    font-family: sans-serif;
+    margin-top: 0px;
+}
+header{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width:  100%;
+    height: 20%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+.main{
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:#1e1e1e;
+    color: white;
+    width: 100%;
+    height: 100%;   
+}
+.img{
+    width:80%;
+}
+form{
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    width: 70%;
+    height: 100%;
+    background-color:#1e1e1e;
+    color: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.divisao_linha {
+    border: none;
+    border-bottom: 1px solid white;
+    margin: none;
+}
+
+.bt_consultar{
+    transform: stranslate(-50%, -50%); 
+    padding: 20px 30px;
+    background-color: rgba(110, 108, 108, 0.6); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;  
+}
+
+.bt_consultar:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"],
+.radio-group input[type="checkbox"]{
+    display: none; /* Esconde o radio button original */
+}
+
+.radio-group label {
+    cursor: pointer; /* Aumenta a interatividade */
+}
+
+.radio-img {
+    width: 260px; /* Tamanho das imagens */
+    height: auto;
+    border-radius: 8px; /* Deixar as bordas arredondadas, se quiser */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.radio-group input[type="radio"]:checked + label .radio-img,
+.radio-group input[type="checkbox"]:checked + label .radio-img {
+    border: 2px solid #5454e6; /* Adiciona borda quando selecionado */
+}
+.radio-group label:hover .radio-img {
+    transform: scale(1.05); /* Animação ao passar o mouse sobre a imagem */
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 15%;
+    box-sizing: border-box;
+}
+.rodape_left, .rodape_right {
+    width: 48%; 
+    margin-left: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: black;
+}

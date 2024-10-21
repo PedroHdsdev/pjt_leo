@@ -1,0 +1,142 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    background-color: black;
+    justify-content: center;
+    margin: 1px;
+}
+h1{
+    background-color: rgb(3, 7, 11);
+    color: aliceblue;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+h5{
+    background-color: rgb(3, 7, 11);
+    color: aliceblue;
+    font-family: sans-serif;
+    margin-top: 0px;
+}
+header{
+    text-align: center;
+    background-color: rgb(8, 8, 8);
+    width:  100%;
+    height: 20%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+.main{
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.imag{
+    margin-bottom: 5px;
+}
+.bt_orcamentos{
+    position: absolute;
+    top: 70%; 
+    left: 43%; 
+    transform: stranslate(-50%, -50%); 
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.bt_orcamentos:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+}
+
+.conteudo{
+    display: flow-root;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    max-height: 40%;
+    margin-bottom: 5px;
+    margin-top: 5px;   
+}
+
+.divisao_linha {
+    border: none;
+    border-bottom: 3px solid white;
+    margin: 50px 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: auto;
+    overflow: hidden; /* Garante que apenas uma imagem seja visível por vez */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animação suave */
+}
+
+.carousel-img {
+    width: 100%; /* As imagens ocupam 100% da largura do carrossel */
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1; /* Garante que os botões fiquem acima das imagens */
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 15%;
+    box-sizing: border-box;
+}
+.rodape_left, .rodape_right {
+    width: 48%; 
+    margin-left: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: black;
+}

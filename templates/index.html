@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>s. marchi|arquitetoss</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <a href="/">
+        <h1>s. marchi|arquitetos</h1>
+        <h5>ARQUITETURA - INTERIORES - CONSTRUÇÕES</h5>
+        </a>
+    </header>
+    <div class="main">
+            <img style="width: 100%; margin: 0px;" src="{{ url_for('static', filename='imagens/img_orcamento.jpeg') }}" alt="orcamento" >
+            <button id="orcamento-btn" class="bt_orcamentos">ORÇAMENTO ONLINE</button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_1.jpeg') }}" alt="carousel_1">
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_4.jpeg') }}" alt="carousel_2" >
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_5.jpeg') }}" alt="carousel_3">
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_6.jpeg') }}" alt="carousel_4">
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_7.jpeg') }}" alt="carousel_5">
+                <img class="carousel-img" src="{{ url_for('static', filename='imagens/img_interno_8.jpeg') }}" alt="carousel_6">
+            </div>
+                <button class="carousel-btn prev" onclick="prevImage()">&#10094;</button>
+                <button class="carousel-btn next" onclick="nextImage()">&#10095;</button>
+        </div>
+        <div class="conteudo">
+            <img style="float: left; width: 50%;" src="{{ url_for('static', filename='imagens/img_interno_4.jpeg') }}" alt="interno_1" >
+            <img style="float: left; width: 50%;" src="{{ url_for('static', filename='imagens/img_quensomos.jpeg') }}" alt="interno_1" >
+        <div class="conteudo">
+            <img style="float: right; width: 50%;" src="{{ url_for('static', filename='imagens/img_interno_2.jpeg') }}" alt="interno_2" >
+            <img style="float: right; width: 50%;" src="{{ url_for('static', filename='imagens/img_nossosservico.jpeg') }}" alt="interno_2" >
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="rodape_left">
+            <a href="https://bit.ly/3A2ngsn" target="_blank">
+            <p>Telefone: (11) 973044770 </p>
+            </a>
+            <img style=" width: 20px; display: inline-flex; " src="{{ url_for('static', filename='imagens/img_redesocial_2.png') }}" alt="redesocial_1" >
+            <p style=" display: inline-flex; margin-left: 10px;">Email:leonardo-demarchi@hotmail.com</p>
+            <p>Segunda á Sexta. Das 9h ás 18h</p>
+            <a href="https://bit.ly/3A2ngsn" target="_blank">
+                <img style="width: 42px;" src="{{ url_for('static', filename='imagens/img_redesocial_1.png') }}" alt="redesocial_2" >
+            </a>
+            <a href="https://www.instagram.com/s.marchi_arquitetos/" target="_blank">
+                <img style=" width: 30px;" src="{{ url_for('static', filename='imagens/img_redesocial_3.png') }}" alt="redesocial_3" >
+            </a>
+        </div>
+        <div class="rodape_right">
+            <a href="/">
+            <img style="float: right; width: 50%;" src="{{ url_for('static', filename='imagens/img_logo_p.jpeg') }}" alt="logo_p" >
+            </a>
+        </div>
+    </div>
+</body>
+</html>

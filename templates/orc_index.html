@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ORÇAMENTO ONLINE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='orc_style.css') }}">
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <a href="/">
+        <h1>s. marchi|arquitetos</h1>
+        <h5>ARQUITETURA - INTERIORES - CONSTRUÇÕES</h5>
+        </a>
+    </header>
+    <div class="main">
+        <form class="form" action="/orcamento" method="POST" id="consultaForm">
+            <label for="Tipo_casa" style="font-size: 26px; margin: 1px;">"Compartilhe conosco suas necessidades e expectativas para seu novo lar, assim 
+                podemos personalizar o orçamento conforme suas necessidades."</label><br><br>
+            
+                <hr class="divisao_linha">
+            <label for="Tipo_casa" style="font-size: 25px; margin: 5px;">Tipo de casa ?</label><br><br>
+            <div class="radio-group">
+                <input type="radio" id="r_terrio" name="G01" value="Térreo" required>
+                <label for="r_terrio">
+                    <img src="{{ url_for('static', filename='imagens/img_terreo_r.jpeg') }}" alt="Térreo" class="radio-img">
+                </label>
+        
+                <input type="radio" id="r_sobrado" name="G01" value="Sobrado">
+                <label for="r_sobrado">
+                    <img src="{{ url_for('static', filename='imagens/img_sobrado_r.jpeg') }}" alt="Sobrado" class="radio-img">
+                </label>
+            </div><br><br>
+            
+            <hr class="divisao_linha">
+            <label for="Tipo_casa" style="font-size: 25px; margin: 5px;">Tamanho dos ambientes ?</label><br><br>
+                <div class="radio-group">
+                    <input type="radio" id="r_medio" name="G02" value="medio" required>
+                    <label for="r_medio">
+                        <img src="{{ url_for('static', filename='imagens/img_ambmedio_r.jpeg') }}" alt="medio" class="radio-img">
+                    </label>
+            
+                    <input type="radio" id="r_grande" name="G02" value="grande">
+                    <label for="r_grande">
+                        <img src="{{ url_for('static', filename='imagens/img_ambgrande_r.jpeg') }}" alt="grande" class="radio-img">
+                    </label>
+
+                    <input type="radio" id="r_exgrande" name="G02" value="extGrande">
+                    <label for="r_exgrande">
+                        <img src="{{ url_for('static', filename='imagens/img_ambexgrandes_r.jpeg') }}" alt="exgrande" class="radio-img">
+                    </label>
+                </div><br><br>
+            
+            <hr class="divisao_linha">
+            <label for="Tipo_casa" style="font-size: 20px;">Quantidade de quartos/suítes?</label><br><br>
+                <div class="radio-group">
+                    <input type="radio" id="r_tres" name="G03" value="3" required>
+                    <label for="r_tres">
+                        <img src="{{ url_for('static', filename='imagens/img_tres_r.jpeg') }}" alt="tres" class="radio-img">
+                    </label>
+        
+                    <input type="radio" id="r_quatro" name="G03" value="4">
+                    <label for="r_quatro">
+                        <img src="{{ url_for('static', filename='imagens/img_quatro_r.jpeg') }}" alt="quatro" class="radio-img">
+                    </label>
+
+                    <input type="radio" id="r_cinco" name="G03" value="5">
+                    <label for="r_cinco">
+                        <img src="{{ url_for('static', filename='imagens/img_cinco_r.jpeg') }}" alt="cinco" class="radio-img">
+                    </label>
+                </div><br><br>
+
+            <hr class="divisao_linha">
+            <label for="Tipo_casa" style="font-size: 20px;">Garagem coberta para quantos carros?</label><br><br>
+                <div class="radio-group">
+                    <input type="radio" id="r_dois_car" name="G04" value="2" required>
+                    <label for="r_dois_car">
+                        <img src="{{ url_for('static', filename='imagens/img_dois_car_r.jpeg') }}" alt="dois_car" class="radio-img">
+                    </label>
+        
+                    <input type="radio" id="r_tres_car" name="G04" value="3">
+                    <label for="r_tres_car">
+                        <img src="{{ url_for('static', filename='imagens/img_tres_car_r.jpeg') }}" alt="tres_car" class="radio-img">
+                    </label>
+
+                    <input type="radio" id="r_quatro_car" name="G04" value="4">
+                    <label for="r_quatro_car">
+                        <img src="{{ url_for('static', filename='imagens/img_quatro_car_r.jpeg') }}" alt="quatro_car" class="radio-img">
+                    </label>
+                </div><br><br>
+            
+                <hr class="divisao_linha">
+                <label for="Tipo_casa" style="font-size: 20px;">Marque outros ambientes desejados:</label><br><br>
+                    <div class="radio-group" style="margin-left: 6%;">
+                        <input type="checkbox" id="r_area_goumet" name="G05[]" value="area_goumet" required>
+                        <label for="r_area_goumet">
+                            <img src="{{ url_for('static', filename='imagens/img_area_goumet_r.jpeg') }}" alt="area_goumet" class="radio-img">
+                        </label>
+            
+                        <input type="checkbox" id="r_hometheater" name="G05[]" value="hometheater">
+                        <label for="r_hometheater">
+                            <img src="{{ url_for('static', filename='imagens/img_hometheater_r.jpeg') }}" alt="hometheater" class="radio-img">
+                        </label>
+    
+                        <input type="checkbox" id="r_quartinhodespejo" name="G05[]" value="despejo">
+                        <label for="r_quartinhodespejo">
+                            <img src="{{ url_for('static', filename='imagens/img_quartinhodespejo_r.jpeg') }}" alt="quartinhodespejo" class="radio-img">
+                        </label>
+
+                        <input type="checkbox" id="r_escritorio" name="G05[]" value="escritorio">
+                        <label for="r_escritorio">
+                            <img src="{{ url_for('static', filename='imagens/img_escritorio_r.jpeg') }}" alt="escritorio" class="radio-img">
+                        </label>
+
+                        <input type="checkbox" id="r_academia" name="G05[]" value="academia">
+                        <label for="r_academia">
+                            <img src="{{ url_for('static', filename='imagens/img_academia_r.jpeg') }}" alt="academia" class="radio-img">
+                        </label>
+
+                        <input type="checkbox" id="r_piscina" name="G05[]" value="piscina">
+                        <label for="r_piscina">
+                            <img src="{{ url_for('static', filename='imagens/img_piscina_r.jpeg') }}" alt="piscina" class="radio-img">
+                        </label>
+                    </div><br><br>
+
+            <hr class="divisao_linha">
+            <input class="bt_consultar" type="submit" value="Consultar"> 
+        </form>
+    </div>
+    <div class="rodape">
+        <div class="rodape_left">
+            <a href="https://bit.ly/3A2ngsn" target="_blank">
+            <p>Telefone: (11) 973044770 </p>
+            </a>
+            <img style=" width: 20px; display: inline-flex; " src="{{ url_for('static', filename='imagens/img_redesocial_2.png') }}" alt="redesocial_1" >
+            <p style=" display: inline-flex; margin-left: 10px;">Email:leonardo-demarchi@hotmail.com</p>
+            <p>Segunda á Sexta. Das 9h ás 18h</p>
+            <a href="https://bit.ly/3A2ngsn" target="_blank">
+                <img style="width: 42px;" src="{{ url_for('static', filename='imagens/img_redesocial_1.png') }}" alt="redesocial_2" >
+            </a>
+            <a href="https://www.instagram.com/s.marchi_arquitetos/" target="_blank">
+                <img style=" width: 30px;" src="{{ url_for('static', filename='imagens/img_redesocial_3.png') }}" alt="redesocial_3" >
+            </a>
+        </div>
+        <div class="rodape_right">
+            <a href="/">
+            <img style="float: right; width: 50%;" src="{{ url_for('static', filename='imagens/img_logo_p.jpeg') }}" alt="logo_p" >
+            </a>
+        </div>
+    </div>
+</body>
+</html>
